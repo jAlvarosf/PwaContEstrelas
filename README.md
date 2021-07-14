@@ -1,2 +1,2 @@
 # PwaContEstrelas
-um contador simples
+um contador simples, pwa com vuejs 
