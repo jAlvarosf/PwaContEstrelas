@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="ion-page" id="app">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Contador de Estrelas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <template>
+      <ion-content class="ion-text-center">
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed"> 
+          <ion-fab-button @click="contador += 1">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+        <p>Contador: {{contador}}</p>
+      </ion-content>
+    </template>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        contador: 0
+      }
+    })
+  </script>
+
+</body>
+
+</html>
